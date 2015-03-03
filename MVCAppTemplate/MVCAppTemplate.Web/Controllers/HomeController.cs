@@ -2,8 +2,8 @@
 {
     using System.Web.Mvc;
 
-    using MVCAppTemplate.Web.Controllers.Base;
     using MVCAppTemplate.Services.Contracts;
+    using MVCAppTemplate.Web.Controllers.Base;
 
     public class HomeController : BaseController
     {

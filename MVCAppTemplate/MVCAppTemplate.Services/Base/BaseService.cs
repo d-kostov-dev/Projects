@@ -8,12 +8,12 @@
     
     public class BaseServices : IBaseServices
     {
-        protected IDataProvider Data { get; private set; }
-
         public BaseServices(IDataProvider dataProvider)
         {
             this.Data = dataProvider;
         }
+
+        protected IDataProvider Data { get; private set; }
 
         public IDictionary<string, string> GetSettings()
         {

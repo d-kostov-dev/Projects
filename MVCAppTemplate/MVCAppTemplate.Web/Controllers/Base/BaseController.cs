@@ -4,8 +4,8 @@
     using System.Web.Mvc;
     using System.Web.Routing;
 
-    using MVCAppTemplate.Web.Infrastructure.ActionResults;
     using MVCAppTemplate.Services.Base;
+    using MVCAppTemplate.Web.Infrastructure.ActionResults;
 
     public class BaseController : Controller
     {
