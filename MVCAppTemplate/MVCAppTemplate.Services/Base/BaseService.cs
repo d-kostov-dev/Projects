@@ -6,7 +6,7 @@
     using MVCAppTemplate.Contracts.Database;
     using MVCAppTemplate.DatabaseModels;
     
-    public class BaseServices : IBaseServices
+    public abstract class BaseServices : IBaseServices
     {
         public BaseServices(IDataProvider dataProvider)
         {
@@ -17,7 +17,7 @@
 
         public IDictionary<string, string> GetSettings()
         {
-            var settingsList = this.Data.SiteSettings.All().ToDictionary(x => x.Name, x => x.Value);
+            var settingsList = this.Data.All<SiteSetting>().ToDictionary(x => x.Name, x => x.Value);
             return settingsList;
         }
     }
