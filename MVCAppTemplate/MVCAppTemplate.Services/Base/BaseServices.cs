@@ -16,27 +16,27 @@
 
         protected IDataProvider Data { get; private set; }
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
             return this.Data.All<T>();
         }
 
-        public T GetById(int id)
+        public virtual T GetById(int id)
         {
             return this.Data.Find<T>(id);
         }
 
-        public void Add(T input)
+        public virtual void Add(T input)
         {
             this.Data.Add<T>(input);
         }
 
-        public void Update(T input)
+        public virtual void Update(T input)
         {
             this.Data.Update<T>(input);
         }
 
-        public void Delete(int id)
+        public virtual void Delete(int id)
         {
             this.Data.Delete<T>(id);
         }
