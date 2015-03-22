@@ -7,7 +7,7 @@
 
     public interface IDataProvider
     {
-        // General
+        // Properties
         IDbContext Context { get; }
 
         // Methods

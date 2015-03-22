@@ -1,9 +1,20 @@
 ﻿namespace MVCAppTemplate.Services.Base
 {
     using System.Collections.Generic;
+    using System.Linq;
 
-    public interface IBaseServices
+    using MVCAppTemplate.DatabaseModels.Base;
+
+    public interface IBaseServices<T> : IService
     {
-        IDictionary<string, string> GetSettings();
+        IQueryable<T> GetAll();
+        
+        T GetById(int id);
+      
+        void Add(T input);
+       
+        void Update(T input);
+        
+        void Delete(int id);
     }
 }

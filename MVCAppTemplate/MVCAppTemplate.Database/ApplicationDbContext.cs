@@ -20,6 +20,10 @@
 
         public IDbSet<SiteSetting> SiteSettings { get; set; }
 
+        public IDbSet<Post> Posts { get; set; }
+
+        public IDbSet<Category> Categories { get; set; }
+
         public DbContext DbContext
         {
             get

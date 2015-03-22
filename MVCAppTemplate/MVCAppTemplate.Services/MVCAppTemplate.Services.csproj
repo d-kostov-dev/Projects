@@ -39,10 +39,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseService.cs" />
+    <Compile Include="Base\BaseServices.cs" />
     <Compile Include="Base\IBaseService.cs" />
-    <Compile Include="Contracts\IHomeService.cs" />
-    <Compile Include="HomeService.cs" />
+    <Compile Include="Base\IService.cs" />
+    <Compile Include="Contracts\ICategoryServices.cs" />
+    <Compile Include="Contracts\IPostServices.cs" />
+    <Compile Include="CategoryServices.cs" />
+    <Compile Include="PostServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

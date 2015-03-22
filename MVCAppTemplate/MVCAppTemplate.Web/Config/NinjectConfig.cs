@@ -58,7 +58,7 @@ namespace MVCAppTemplate.Web
 
             ////.WithConstructorArgument("context", c => new ApplicationDbContext());
 
-            kernel.Bind(k => k.FromAssemblyContaining<IBaseServices>()
+            kernel.Bind(k => k.FromAssemblyContaining<IService>()
                 .SelectAllClasses()
                 .BindAllInterfaces()
                 .Configure(b => b.InRequestScope()));

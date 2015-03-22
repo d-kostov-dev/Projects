@@ -9,12 +9,12 @@
 
     public class BaseController : Controller
     {
-        private IBaseServices baseService;
+        private IService settingsProvider;
 
-        public BaseController(IBaseServices baseService)
+        public BaseController(IService settingsProvider)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
-            this.baseService = baseService;
+            this.settingsProvider = settingsProvider;
         }
 
         protected override IAsyncResult BeginExecute(
@@ -22,7 +22,7 @@
             AsyncCallback callback, 
             object state)
         {
-            this.ViewBag.Settings = this.baseService.GetSettings();
+            this.ViewBag.Settings = this.settingsProvider.GetSettings();
             return base.BeginExecute(requestContext, callback, state);
         }
 

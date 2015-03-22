@@ -7,12 +7,12 @@
 
     public class HomeController : BaseController
     {
-        private IHomeServices homeService;
+        private IPostServices postServices;
 
-        public HomeController(IHomeServices homeService)
-            : base(homeService)
+        public HomeController(IPostServices postServices)
+            : base(postServices)
         {
-            this.homeService = homeService;
+            this.postServices = postServices;
         }
 
         public ActionResult Index()

@@ -12,6 +12,10 @@
 
         IDbSet<SiteSetting> SiteSettings { get; set; }
 
+        IDbSet<Post> Posts { get; set; }
+
+        IDbSet<Category> Categories { get; set; }
+
         // Methods
         int SaveChanges();
 
